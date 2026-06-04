@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<title>Osservatorio679 — Demo widget integrato</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  :root { font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; color:#222; }
+  body { margin:0; padding:32px; background:#f6f7fb; min-height:100vh; }
+  .wrap { max-width:820px; margin:0 auto; }
+  h1 { font-size:22px; margin:0 0 4px; }
+  .sub { color:#666; margin:0 0 28px; font-size:14px; }
+  .card { background:#fff; border:1px solid #e3e6ef; border-radius:10px; padding:20px; margin:16px 0;
+          box-shadow:0 1px 2px rgba(0,0,0,.04); }
+  .row { display:flex; flex-wrap:wrap; gap:10px; margin-top:10px; }
+  button { font: 600 14px system-ui; padding:10px 16px; border:0; border-radius:8px; cursor:pointer;
+           color:#fff; transition: filter .15s ease; }
+  button:hover { filter: brightness(1.1); }
+  .b-normal    { background:#00897B; }
+  .b-sensitive { background:#F9A825; color:#3a2900; }
+  .b-profiling { background:#C62828; }
+  .b-mixed     { background:#37474F; }
+  .b-clear     { background:#9aa3b0; }
+  pre { background:#0f172a; color:#e2e8f0; padding:14px; border-radius:8px; font: 12px/1.5 ui-monospace,Consolas,monospace;
+        max-height:260px; overflow:auto; margin:0; }
+  code.kw { color:#7dd3fc; }
+  .pill { display:inline-block; padding:2px 10px; border-radius:99px; font-size:12px; font-weight:600;
+          background:#e0f2f1; color:#00695C; }
+  .src { font-size:12px; color:#666; word-break:break-all; }
+  hr { border:0; border-top:1px solid #e3e6ef; margin:18px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Osservatorio679 — Demo widget integrato</h1>
+  <p class="sub">
+    Widget e icone caricati live da
+    <span class="pill">feniva.github.io/o679</span>
+  </p>
+
+  <div class="card">
+    <strong>Test trattamenti</strong>
+    <p style="color:#555;margin:6px 0 0">
+      Ogni pulsante invoca <code class="kw">o679.notify(...)</code> con un livello dati diverso.
+      Il widget appare in basso a destra: bolla colorata, badge GDPR, icona corrispondente e pulsanti
+      <em>Informativa / Sospendi / Revoca</em>.
+    </p>
+    <div class="row">
+      <button class="b-normal"    onclick="testNormal()">▶ Normal (Art. 4.1)</button>
+      <button class="b-sensitive" onclick="testSensitive()">⚠ Sensitive (Art. 9)</button>
+      <button class="b-profiling" onclick="testProfiling()">🔴 Profiling (Art. 22)</button>
+      <button class="b-mixed"     onclick="testSequence()">↻ Sequenza completa</button>
+      <button class="b-clear"     onclick="showLog()">📜 Log consensi</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <strong>Console di evento</strong>
+    <p class="sub" style="margin:6px 0 10px">Promise <code class="kw">notify()</code> + log consenso (<code class="kw">localStorage</code>)</p>
+    <pre id="log">// In attesa di eventi…</pre>
+  </div>
+
+  <div class="card">
+    <strong>Sorgenti caricate dal CDN</strong>
+    <hr>
+    <div class="src">script: <code>https://feniva.github.io/o679/widget/o679-widget.js</code></div>
+    <div class="src">icona di test: <code>https://feniva.github.io/o679/icons/sensitive/dpo.png</code></div>
+    <div class="src">manifest:    <code>https://feniva.github.io/o679/icons.json</code></div>
+  </div>
+
+</div>
+
+<!-- Widget Osservatorio679 caricato dal CDN GitHub Pages -->
+<script src="https://feniva.github.io/o679/widget/o679-widget.js"></script>
+<script>
+  // 1. Inizializzazione titolare
+  const o679 = new Osservatorio679Widget({
+    titolare:   "Azienda Demo SRL",
+    privacyUrl: "https://feniva.github.io/o679/",
+    dpoEmail:   "dpo@aziendademo.it",
+    position:   "bottom-right",
+    lang:       "it",
+    autoHide:   0,        // resta visibile finché l'utente non agisce
+    debug:      true
+  });
+
+  const logEl = document.getElementById('log');
+  function pushLog(msg) {
+    const t = new Date().toISOString().slice(11,19);
+    logEl.textContent = `[${t}] ${msg}\n` + logEl.textContent;
+  }
+
+  // 2. Esempi di trattamento
+  function testNormal() {
+    o679.notify({
+      event: 'demo-form-submit',
+      dataLevel: 'normal',
+      icon: 'dati-personali',
+      message: 'Stiamo registrando i tuoi dati per la creazione dell’account.',
+      purpose: 'Creazione account utente',
+      canRevoke: true,
+    }).then(r => pushLog(`normal → esito utente: ${r}`));
+    pushLog('notify(normal, dati-personali) chiamato');
+  }
+
+  function testSensitive() {
+    o679.notify({
+      event: 'demo-medical',
+      dataLevel: 'sensitive',
+      icon: 'categoria-dati',
+      message: 'Stiamo trattando dati relativi alla tua salute (Art. 9 GDPR).',
+      purpose: 'Prenotazione visita medica',
+      canRevoke: true,
+    }).then(r => pushLog(`sensitive → esito utente: ${r}`));
+    pushLog('notify(sensitive, categoria-dati) chiamato');
+  }
+
+  function testProfiling() {
+    o679.notify({
+      event: 'demo-marketing',
+      dataLevel: 'profiling',
+      icon: 'bilanciamento-interessi',
+      message: 'Stiamo profilando i tuoi interessi per personalizzare le offerte (Art. 22 GDPR).',
+      purpose: 'Profilazione marketing',
+      canRevoke: true,
+    }).then(r => pushLog(`profiling → esito utente: ${r}`));
+    pushLog('notify(profiling, bilanciamento-interessi) chiamato');
+  }
+
+  function testSequence() {
+    pushLog('Sequenza: normal → sensitive → profiling (4s l’uno)');
+    testNormal();
+    setTimeout(testSensitive, 4000);
+    setTimeout(testProfiling, 8000);
+  }
+
+  function showLog() {
+    const log = o679.getConsentLog();
+    pushLog(`getConsentLog(): ${log.length} entries\n` + JSON.stringify(log, null, 2));
+  }
+</script>
+</body>
+</html>
