@@ -1,0 +1,242 @@
+{
+  "version": "1.0.0",
+  "name": "Osservatorio679 Icons",
+  "description": "Sistema iconografico standardizzato per informative privacy GDPR — Art. 12 §7",
+  "license": "CC BY — Osservatorio679",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "author": "Osservatorio679",
+  "homepage": "https://feniva.github.io/o679/",
+  "gdpr_reference": "GDPR Art. 12 §7, Art. 13, Art. 14",
+  "states": {
+    "normal":    { "color": "#00897B", "label": "Dati personali normali", "gdpr": "Art. 4(1)" },
+    "sensitive": { "color": "#F9A825", "label": "Dati particolari (Art. 9)", "gdpr": "Art. 9 GDPR" },
+    "profiling": { "color": "#C62828", "label": "Dati profilizzanti", "gdpr": "Art. 22 GDPR" },
+    "bn":        { "color": "#000000", "label": "Bianco/nero — stampa", "gdpr": "Art. 12 §7" }
+  },
+  "icons": [
+    {
+      "id": "titolare-trattamento",
+      "label_it": "Titolare del Trattamento",
+      "label_en": "Data Controller",
+      "gdpr_art": "13.1.a",
+      "description_it": "Identità del titolare del trattamento dei dati personali",
+      "use_cases": ["informativa", "cartellonistica", "banner"],
+      "files": {
+        "normal":    "icons/normal/titolare-trattamento.png",
+        "sensitive": "icons/sensitive/titolare-trattamento.png",
+        "profiling": "icons/profiling/titolare-trattamento.png",
+        "bn":        "icons/bn/titolare-trattamento.png"
+      }
+    },
+    {
+      "id": "finalita",
+      "label_it": "Finalità del trattamento",
+      "label_en": "Purpose of Processing",
+      "gdpr_art": "13.1.c",
+      "description_it": "Scopi per cui vengono raccolti ed elaborati i dati personali",
+      "use_cases": ["informativa", "cartellonistica", "banner", "widget"],
+      "files": {
+        "normal":    "icons/normal/finalita.png",
+        "sensitive": "icons/sensitive/finalita.png",
+        "profiling": "icons/profiling/finalita.png",
+        "bn":        "icons/bn/finalita.png"
+      }
+    },
+    {
+      "id": "tempi-conservazione",
+      "label_it": "Tempi di conservazione",
+      "label_en": "Retention Period",
+      "gdpr_art": "13.2.a",
+      "description_it": "Periodo di conservazione dei dati personali",
+      "use_cases": ["informativa", "cartellonistica"],
+      "files": {
+        "normal":    "icons/normal/tempi-conservazione.png",
+        "sensitive": "icons/sensitive/tempi-conservazione.png",
+        "profiling": "icons/profiling/tempi-conservazione.png",
+        "bn":        "icons/bn/tempi-conservazione.png"
+      }
+    },
+    {
+      "id": "trasferimento-dati",
+      "label_it": "Trasferimento dati",
+      "label_en": "Data Transfer",
+      "gdpr_art": "13.1.f",
+      "description_it": "Trasferimento dei dati verso paesi terzi o organizzazioni internazionali",
+      "use_cases": ["informativa", "cartellonistica"],
+      "files": {
+        "normal":    "icons/normal/trasferimento-dati.png",
+        "sensitive": "icons/sensitive/trasferimento-dati.png",
+        "profiling": "icons/profiling/trasferimento-dati.png",
+        "bn":        "icons/bn/trasferimento-dati.png"
+      }
+    },
+    {
+      "id": "diritti",
+      "label_it": "Diritti dell'interessato",
+      "label_en": "Data Subject Rights",
+      "gdpr_art": "13.2.b",
+      "description_it": "Diritti di accesso, rettifica, cancellazione, portabilità, opposizione e limitazione",
+      "use_cases": ["informativa", "widget"],
+      "files": {
+        "normal":    "icons/normal/diritti.png",
+        "sensitive": "icons/sensitive/diritti.png",
+        "profiling": "icons/profiling/diritti.png",
+        "bn":        "icons/bn/diritti.png"
+      }
+    },
+    {
+      "id": "dpo",
+      "label_it": "DPO — Data Protection Officer",
+      "label_en": "Data Protection Officer",
+      "gdpr_art": "13.1.b",
+      "description_it": "Riferimento del Responsabile della Protezione dei Dati (RPD/DPO)",
+      "use_cases": ["informativa", "cartellonistica"],
+      "files": {
+        "normal":    "icons/normal/dpo.png",
+        "sensitive": "icons/sensitive/dpo.png",
+        "profiling": "icons/profiling/dpo.png",
+        "bn":        "icons/bn/dpo.png"
+      }
+    },
+    {
+      "id": "categoria-dati",
+      "label_it": "Categoria dati",
+      "label_en": "Data Category",
+      "gdpr_art": "13.1.c",
+      "description_it": "Tipologie di dati personali trattati",
+      "use_cases": ["informativa", "widget"],
+      "files": {
+        "normal":    "icons/normal/categoria-dati.png",
+        "sensitive": "icons/sensitive/categoria-dati.png",
+        "profiling": "icons/profiling/categoria-dati.png",
+        "bn":        "icons/bn/categoria-dati.png"
+      }
+    },
+    {
+      "id": "dati-personali",
+      "label_it": "Dati personali",
+      "label_en": "Personal Data",
+      "gdpr_art": "4.1",
+      "description_it": "Qualsiasi informazione relativa a una persona fisica identificata o identificabile",
+      "use_cases": ["informativa", "widget"],
+      "files": {
+        "normal":    "icons/normal/dati-personali.png",
+        "sensitive": "icons/sensitive/dati-personali.png",
+        "profiling": "icons/profiling/dati-personali.png",
+        "bn":        "icons/bn/dati-personali.png"
+      }
+    },
+    {
+      "id": "destinatari",
+      "label_it": "Destinatari",
+      "label_en": "Recipients",
+      "gdpr_art": "13.1.e",
+      "description_it": "Soggetti a cui i dati vengono comunicati o che ne vengono a conoscenza",
+      "use_cases": ["informativa"],
+      "files": {
+        "normal":    "icons/normal/destinatari.png",
+        "sensitive": "icons/sensitive/destinatari.png",
+        "profiling": "icons/profiling/destinatari.png",
+        "bn":        "icons/bn/destinatari.png"
+      }
+    },
+    {
+      "id": "revoca-consenso",
+      "label_it": "Revoca consenso",
+      "label_en": "Consent Withdrawal",
+      "gdpr_art": "7.3",
+      "description_it": "Diritto di revocare il consenso al trattamento in qualsiasi momento",
+      "use_cases": ["informativa", "widget", "banner"],
+      "files": {
+        "normal":    "icons/normal/revoca-consenso.png",
+        "sensitive": "icons/sensitive/revoca-consenso.png",
+        "profiling": "icons/profiling/revoca-consenso.png",
+        "bn":        "icons/bn/revoca-consenso.png"
+      }
+    },
+    {
+      "id": "reclamo",
+      "label_it": "Reclamo al Garante",
+      "label_en": "Complaint to Supervisory Authority",
+      "gdpr_art": "13.2.d",
+      "description_it": "Diritto di proporre reclamo all'Autorità di controllo",
+      "use_cases": ["informativa"],
+      "files": {
+        "normal":    "icons/normal/reclamo.png",
+        "sensitive": "icons/sensitive/reclamo.png",
+        "profiling": "icons/profiling/reclamo.png",
+        "bn":        "icons/bn/reclamo.png"
+      }
+    },
+    {
+      "id": "trattamento-in-corso",
+      "label_it": "Trattamento dati in corso",
+      "label_en": "Processing in Progress",
+      "gdpr_art": "12",
+      "description_it": "Indicatore real-time di un trattamento attivo — per widget di trasparenza dinamica",
+      "use_cases": ["widget", "banner"],
+      "files": {
+        "normal":    "icons/normal/trattamento-in-corso.png",
+        "sensitive": "icons/sensitive/trattamento-in-corso.png",
+        "profiling": "icons/profiling/trattamento-in-corso.png",
+        "bn":        "icons/bn/trattamento-in-corso.png"
+      }
+    },
+    {
+      "id": "fonte-del-dato",
+      "label_it": "Fonte del dato",
+      "label_en": "Data Source",
+      "gdpr_art": "14.2.f",
+      "description_it": "Origine da cui provengono i dati personali (Art. 14 — dati non raccolti dall'interessato)",
+      "use_cases": ["informativa"],
+      "files": {
+        "normal":    "icons/normal/fonte-del-dato.png",
+        "sensitive": "icons/sensitive/fonte-del-dato.png",
+        "profiling": "icons/profiling/fonte-del-dato.png",
+        "bn":        "icons/bn/fonte-del-dato.png"
+      }
+    },
+    {
+      "id": "bilanciamento-interessi",
+      "label_it": "Bilanciamento degli interessi",
+      "label_en": "Legitimate Interest Assessment",
+      "gdpr_art": "6.1.f",
+      "description_it": "Legittimo interesse del titolare quale base giuridica del trattamento",
+      "use_cases": ["informativa"],
+      "files": {
+        "normal":    "icons/normal/bilanciamento-interessi.png",
+        "sensitive": "icons/sensitive/bilanciamento-interessi.png",
+        "profiling": "icons/profiling/bilanciamento-interessi.png",
+        "bn":        "icons/bn/bilanciamento-interessi.png"
+      }
+    },
+    {
+      "id": "obbligo-conferimento",
+      "label_it": "Obbligo di conferimento",
+      "label_en": "Obligation to Provide Data",
+      "gdpr_art": "13.2.e",
+      "description_it": "Indicazione se il conferimento dei dati è obbligatorio e le conseguenze del rifiuto",
+      "use_cases": ["informativa"],
+      "files": {
+        "normal":    "icons/normal/obbligo-conferimento.png",
+        "sensitive": "icons/sensitive/obbligo-conferimento.png",
+        "profiling": "icons/profiling/obbligo-conferimento.png",
+        "bn":        "icons/bn/obbligo-conferimento.png"
+      }
+    },
+    {
+      "id": "diritto-accesso",
+      "label_it": "Diritto di accesso ai dati",
+      "label_en": "Right of Access",
+      "gdpr_art": "15",
+      "description_it": "Diritto dell'interessato di ottenere conferma che sia in corso un trattamento e copia dei dati",
+      "use_cases": ["informativa", "widget"],
+      "files": {
+        "normal":    "icons/normal/diritto-accesso.png",
+        "sensitive": "icons/sensitive/diritto-accesso.png",
+        "profiling": "icons/profiling/diritto-accesso.png",
+        "bn":        "icons/bn/diritto-accesso.png"
+      }
+    }
+  ]
+}

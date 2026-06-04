@@ -1,0 +1,12 @@
+/icons/*
+  Cache-Control: public, max-age=604800, immutable
+  Access-Control-Allow-Origin: *
+
+/icons.json
+  Cache-Control: public, max-age=3600
+  Access-Control-Allow-Origin: *
+  Content-Type: application/json; charset=utf-8
+
+/widget/*.js
+  Cache-Control: public, max-age=86400
+  Access-Control-Allow-Origin: *
