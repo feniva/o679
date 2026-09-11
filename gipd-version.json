@@ -1,14 +1,19 @@
 {
-  "version": "1.4.0",
-  "date": "2026-07-06",
-  "url": "https://github.com/feniva/o679/releases",
+  "version": "1.8.0",
+  "date": "2026-09-11",
+  "url": "https://github.com/Osservatorio679/o679/releases",
+  "download": "https://github.com/Osservatorio679/o679/releases/latest",
   "novita": [
-    "Base giuridica e Perché visibili nelle card",
-    "Formati card A6/A5/A4 con stampa reale",
-    "QR code reale offline",
-    "Etichette AI EU (AI Act art. 50)",
-    "Demo live widget",
-    "Guida in linea e accessibilità EAA",
-    "Assemblatore automatico vignette fumetto"
-  ]
+    "Il GIPD è migrato su github.com/Osservatorio679/o679: scarica da lì questa e le prossime versioni",
+    "Icone ufficiali caricate direttamente dal GitHub Osservatorio679 (Pages + raw), copia locale solo di riserva",
+    "Colori reali dei PNG ufficiali per dati particolari e profilazione",
+    "Un solo index.html con selettore grafica UIX / Classica",
+    "Rimossa la vecchia sorgente icone non HTTPS",
+    "Sicurezza: codifica dei campi liberi in card ed export HTML, controllo aggiornamenti blindato",
+    "Corretto il numero di versione interno (la 1.7.1 si dichiarava 1.7.0)"
+  ],
+  "previous": {
+    "version": "1.7.1",
+    "date": "2026-07-30"
+  }
 }
