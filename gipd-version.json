@@ -1,19 +1,16 @@
 {
-  "version": "1.8.0",
-  "date": "2026-09-11",
+  "version": "1.8.1",
+  "date": "2026-09-12",
   "url": "https://github.com/Osservatorio679/o679/releases",
   "download": "https://github.com/Osservatorio679/o679/releases/latest",
   "novita": [
-    "Il GIPD è migrato su github.com/Osservatorio679/o679: scarica da lì questa e le prossime versioni",
-    "Icone ufficiali caricate direttamente dal GitHub Osservatorio679 (Pages + raw), copia locale solo di riserva",
-    "Colori reali dei PNG ufficiali per dati particolari e profilazione",
-    "Un solo index.html con selettore grafica UIX / Classica",
-    "Rimossa la vecchia sorgente icone non HTTPS",
-    "Sicurezza: codifica dei campi liberi in card ed export HTML, controllo aggiornamenti blindato",
-    "Corretto il numero di versione interno (la 1.7.1 si dichiarava 1.7.0)"
+    "Il GIPD e migrato su github.com/Osservatorio679/o679: scarica da li questa e le prossime versioni",
+    "Tipologia documento attiva: Art. 13, Art. 14 oppure Art. 13 e 14 (predefinita), riflessa su card, widget, export, API e fumetto",
+    "Informativa del tool riscritta: Osservatorio679 pubblica e mantiene il GIPD ma non raccoglie ne tratta alcun dato, quindi non e titolare del trattamento ne referente",
+    "PDF dell'informativa rigenerato e allineato"
   ],
   "previous": {
-    "version": "1.7.1",
-    "date": "2026-07-30"
+    "version": "1.8.0",
+    "date": "2026-09-11"
   }
 }
