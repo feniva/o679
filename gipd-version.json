@@ -1,16 +1,16 @@
 {
-  "version": "1.8.1",
-  "date": "2026-09-12",
+  "version": "1.8.2",
+  "date": "2026-09-15",
   "url": "https://github.com/Osservatorio679/o679/releases",
   "download": "https://github.com/Osservatorio679/o679/releases/latest",
   "novita": [
-    "Il GIPD e migrato su github.com/Osservatorio679/o679: scarica da li questa e le prossime versioni",
-    "Tipologia documento attiva: Art. 13, Art. 14 oppure Art. 13 e 14 (predefinita), riflessa su card, widget, export, API e fumetto",
-    "Informativa del tool riscritta: Osservatorio679 pubblica e mantiene il GIPD ma non raccoglie ne tratta alcun dato, quindi non e titolare del trattamento ne referente",
-    "PDF dell'informativa rigenerato e allineato"
+    "Il GIPD e' migrato su github.com/Osservatorio679/o679: scarica da li' questa e le prossime versioni",
+    "Stampa PDF delle card rifatta: una card per pagina, pagina del formato scelto (A6/A5/A4), fronte e retro identici per la stampa fronte/retro",
+    "Il contenuto si riproporziona per starci sempre, con la stessa scala su fronte e retro",
+    "Non si stampano piu' le etichette FRONTE/RETRO, la legenda e la pagina bianca in coda"
   ],
   "previous": {
-    "version": "1.8.0",
-    "date": "2026-09-11"
+    "version": "1.8.1",
+    "date": "2026-09-12"
   }
 }
